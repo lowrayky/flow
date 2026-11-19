@@ -1,0 +1,906 @@
+/* базовые настройки и установление шрифта по умлолчанию для всего лендинга */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    scroll-behavior: smooth;
+}
+
+
+/* подключение шрифтов*/
+@font-face {
+    font-family: 'unbounded';
+    src: url(../fonts/Unbounded-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+/* часто используемые теги */
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.py-160 {
+    padding-top: 160px;
+}
+
+.py-80 {
+    padding-top: 80px;
+}
+
+/* хедер начало */
+.header {
+    position: fixed; 
+    top: 20px;       
+    width: 100%;
+    z-index: 10;
+}
+
+.header-container {
+    max-width: 850px;
+    margin: 0 auto;   
+    display: flex;
+    align-items: center;
+    gap: 20px;      
+}
+
+.header-main, .header-phone {
+    background-color: black; 
+    color: white;
+    border-radius: 10px;      
+    height: 70px;       
+    display: flex;
+    align-items: center;
+}
+
+/* левая плашка */
+.header-main {
+    width: 650px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* логотип */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+.logo-icon {
+    width: 40px;
+    height: 40px;
+}
+.logo-text {
+    font-family: 'unbounded';
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+}
+
+/* навигация */
+.nav {
+  display: flex;
+  gap: 40px; /* Расстояние между пунктами меню */
+}
+.nav a {
+  color: white;
+}
+.nav a:hover {
+    color: rgb(200, 200, 200);
+    transition: 0.5s ease;
+}
+
+/* правая плашка с телефоном */
+.header-phone {
+    color: #ED6A3D ;
+    padding: 0 20px;
+    font-weight: 600;
+}
+
+.header-phone:hover {
+    color: #c75731;
+    transition: 0.5s ease;
+}
+/* хедер конец */
+
+/* главный баннер начало */
+.hero-section {
+    background-image: url(../assets/GIFs/hero.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.h1-hero {
+    color: white;
+    font-size: 96px;
+    font-family: 'unbounded';
+    max-width: 926px;
+    font-weight: 700;
+}
+
+.content-hero {
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.p-hero {
+    color: white;
+    max-width: 403px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.btns-hero {
+    display: flex;
+    gap: 20px;
+}
+
+.btn1-hero {
+    width: 389px;
+    height: 75px;
+    border-radius: 10px;
+    color: white;
+    background-color: #ED6A3D;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn2-hero {
+    width: 322px;
+    height: 75px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn1-hero:hover {
+    background-color: black;
+    transition: 0.5s ease;
+}
+
+.btn2-hero:hover {
+    background-color: #ED6A3D;
+    transition: 0.5s ease;
+}
+/* главный баннер конец */
+
+/* о клубе начало */
+.img-h2-about {
+    display: flex;
+    gap: 96px; 
+}
+
+.h2-about {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: 'unbounded';
+}
+
+.right-about {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-about {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 525px;
+    height: 338px;
+}
+
+.p-about {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.span-about {
+    color: #ED6A3D;
+}
+
+.btn-about {
+    font-size: 18px;
+    width: 322px;
+    height: 75px;
+    margin-top: auto;
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-about:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    transition: 0.5s ease;
+}
+/* о клубе конец */
+
+/* Абонементы начало */
+.h2-subs {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: 'unbounded';
+}
+
+.cards-subs {
+    display: flex;
+    gap: 30px;
+}
+
+.card-subs {
+    position: relative;
+    width: 380px;
+    height: 625px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 30px;
+}
+.card-subs1 {
+    position: relative;
+    width: 380px;
+    height: 625px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #0078B7;
+    border-radius: 20px;
+    padding: 30px;
+}
+.card-subs1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 25px rgb(0, 120, 183, 0.15);
+    transition: 0.5s ease;
+}
+.card-subs:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 25px rgb(0, 0, 0, 0.15);
+    transition: 0.5s ease;
+}
+
+.most-recent-subs {
+    padding: 5px;
+    position: absolute;
+    top: -15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    width: 223px;
+    height: 28px;
+    border-radius: 40px;
+    background-color: #ED6A3D;
+}
+
+.h3-description-subs, .h3-description-subs1, .price-duration-subs, .price-duration-subs1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.h3-subs {
+    font-size: 28px;
+    font-family: 'unbounded';
+}
+.h3-subs1 {
+    font-size: 28px;
+    font-family: 'unbounded';
+    color: white;
+}
+
+.description-subs {
+    font-weight: 500;
+    font-size: 18px;
+}
+.description-subs1 {
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+}
+
+.price-subs {
+    font-size: 48px;
+    font-family: 'unbounded';
+    font-weight: 700;
+}
+.price-subs1 {
+    font-size: 48px;
+    font-family: 'unbounded';
+    font-weight: 700;
+    color: white;
+}
+
+.duration-subs {
+    font-weight: 500;
+    font-size: 18px;
+}
+.duration-subs1 {
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+}
+
+.advantages-subs, .advantages-subs1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.advantage-subs, .advantage-subs1 {
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.advantage-subs1 {
+    color: white;
+}
+.advantage-subs::before {
+    content: "";
+    display: block;
+    background-image: url(../assets/icons/check-mark.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 17px;
+    height: 15px;
+    flex-shrink: 0; /* не дает галочке сжиматься при длинном тексте */
+}
+.advantage-subs1::before {
+    content: "";
+    display: block;
+    background-image: url(../assets/icons/white-check-mark.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 17px;
+    height: 15px;
+    flex-shrink: 0; /* не дает галочке сжиматься при длинном тексте */
+}
+
+.btn-join-subs {
+    width: 314px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 40px;
+    cursor: pointer;
+}
+.btn-join-subs1 {
+    width: 314px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #ED6A3D;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    bottom: 40px;
+    cursor: pointer;
+}
+.btn-join-subs:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    transition: 0.5s ease;
+}
+.btn-join-subs1:hover {
+    background-color: #0078B7;
+    color: white;
+    border: 1px solid white;
+    transition: 0.5s ease;
+}
+/* Абонементы конец */
+
+/* Комьюнити начало */
+.h2-community {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: 'unbounded';
+}
+
+.all-community {
+    display: flex;
+    gap: 32px;
+}
+
+.img-community {
+    width: 585px;
+    height: 630px;
+    background-image: url(../assets/images/image-community.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.right-community {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 32px;
+}
+
+.bottom-community {
+    display: flex;
+    gap: 32px;
+    flex: 1;
+}
+
+.rectangle-community {
+    flex: 1;
+    min-width: 0;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-community {
+    font-family: 'unbounded';
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.text-community {
+    font-size: 16px;
+    font-size: 24px;
+    margin: 0;
+}
+
+.rectangle-blue-community {
+    background-color: #0073B7;
+    color: white;
+}
+
+.rectangle-white-community {
+    background-color: white;
+    border: 1px solid #C8C8C8;
+    color: black;
+}
+
+.rectangle-orange-community {
+    background-color: #F26B3A;
+    color: black;
+}
+/* Комьюнити конец */
+
+/* Отзывы начало  */
+
+.title-reviews {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: 'unbounded';
+}
+
+.card-reviews {
+    position: relative; 
+    width: 1200px;
+    height: 700px;
+    border-radius: 20px;
+}
+
+.content-reviews {
+    position: absolute; 
+    bottom: 40px;
+    left: 40px;
+    max-width: 794px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name-reviews {
+    font-family: 'unbounded';
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.text-reviews {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.controls-reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    gap: 160px;
+    margin-top: 20px;
+}
+
+.arrow-btn {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #8F8F8F;
+    background-color: white;
+    cursor: pointer;
+}
+
+.arrow-btn svg{
+    fill: #000;
+}
+
+.arrow-btn:hover svg{
+    background-color:#0073B7;
+    fill: #fff;
+    transition: 0.6s ease;
+    transition: 0.5s ease;
+}
+
+.arrow-btn:hover{
+    background-color:#0073B7;
+    border: none;
+    fill: #fff;
+}
+
+.dots-reviews {
+    display: flex;
+    gap: 20px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+}
+
+.active {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #0073B7;
+}
+/* Отзывы конец  */
+
+/* FAQ начало */
+.title-faq {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: 'unbounded';
+}
+
+.faq-line {
+    border-bottom: 1px solid #E5E7EB;
+    padding: 28px 0;
+}
+
+.faq-line:first-child {
+    border-top: 1px solid #E5E7EB;
+}
+
+.faq-question {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question::after {
+    content: "";
+    background-image: url(../assets/icons/arrow-down.svg);
+    width: 34px;
+    height: 20px;
+}
+
+.faq-question::after {
+    content: "";
+    background-image: url(../assets/icons/arrow-down.svg);
+    width: 34px;
+    height: 20px;
+}
+
+.faq-line[open] .faq-question::after {
+    content: "";
+    background-image: url(../assets/icons/arrow-up.svg);
+    width: 34px;
+    height: 20px;
+}
+
+.faq-answer {
+    margin-top: 30px;
+    max-width: 1050px;
+    font-size: 24px;
+}
+/* FAQ конец */
+
+/* Форма начало  */
+.form-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/GIFs/form.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 190px;
+    padding-bottom: 190px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.form-info {
+    max-width: 590px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-form {
+    font-family: 'unbounded';
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+    width: 583px;
+}
+
+.form-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.text-form {
+    font-size: 24px;
+    color: white;
+}
+
+.card-form {
+    width: 600px;
+    height: 700px;
+    background-color: #0073B1;
+    border-radius: 20px;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.card-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 69px;
+} 
+
+.form-input {
+    width: 510px;
+    height: 80px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+    color: white !important;
+    font-size: 24px;
+    font-family: inherit;
+    outline: none;
+    padding: 15px 15px;
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 24px;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.form-checkbox input {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0; /* Чтобы квадратик не сжался из-за текста */
+    accent-color: #ED6A3D;
+    cursor: pointer;
+}
+
+.form-checkbox a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.form-btn {
+    width: 510px;
+    height: 80px;
+    background-color: white;
+    color: black;
+    border: transparent;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    background-color: #0073B7;
+    border: 1px solid white;
+    color: white;
+    transition: 0.5s ease;
+}
+
+/* Форма конец  */
+
+/* Футер начало  */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 120px 0 40px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 220px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.the-others {
+    display: flex;
+    justify-content: space-between;
+    gap: 110px;
+    padding-bottom: 80px;
+}
+
+.footer-col-main {
+    min-width: 404px;
+}
+
+.footer-col {
+    min-width: 300px;
+}
+
+.footer-logo {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.footer-logo-text {
+    color: white;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: 'unbounded';
+}
+
+.footer-desc {
+    font-size: 24px;
+    color: #8F8F8F;
+    font-weight: 400;
+    margin-bottom: 60px;
+    
+}
+
+/* Блок с документами в левой колонке */
+.footer-docs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-docs a:hover {
+    text-decoration: underline;
+}
+
+.footer-docs-title {
+  font-size: 24px;
+  color: #8F8F8F;
+}
+
+.footer-doc-link {
+  font-size: 24px;
+  color: #8F8F8F;
+  text-decoration: none;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.footer-list a:hover {
+    text-decoration: underline;
+    transition: 0.5s ease;
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.footer-contacts a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-contacts a:hover {
+    text-decoration: underline;
+    transition: 0.5s ease;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.sm {
+  width: 60px;
+  height: 60px;
+}
+
+.sm:hover {
+    transform: rotate(15deg);
+}
+
+/* Нижняя строка с копирайтом */
+.footer-bottom {
+  padding-top: 40px;
+  font-size: 24px;
+  color: #8F8F8F;
+}
+/* Футер конец  */
